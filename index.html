@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Прости меня</title>
+  <!-- Подключаем красивый шрифт -->
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #111 0%, #222 100%), url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+      background-attachment: fixed;
+      background-size: cover;
+      color: #f2f2f2;
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1, h2 {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.5s ease forwards;
+      font-family: 'Marcellus', serif;
+      letter-spacing: 1px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin: 60px 20px 40px;
+      line-height: 1.6;
+      animation-delay: 0.2s;
+      text-shadow: 0 0 8px rgba(255, 192, 203, 0.4); /* лёгкое розовое свечение */
+    }
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin: 30px 20px 20px;
+      animation-delay: 1.6s;
+      text-shadow: 0 0 6px rgba(135, 206, 250, 0.4); /* нежно-голубое свечение */
+    }
+    .image-container {
+      margin: 40px auto;
+      max-width: 600px;
+      opacity: 0;
+      transform: scale(0.95);
+      animation: fadeIn 1.5s ease forwards;
+    }
+    .image-container:nth-of-type(1) {
+      animation-delay: 0.8s;
+    }
+    .image-container:nth-of-type(2) {
+      animation-delay: 2.2s;
+    }
+    img {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      margin: 0 auto;
+      filter: grayscale(100%);
+      box-shadow: 0 0 20px rgba(255,255,255,0.15);
+      transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+    }
+    img:hover {
+      transform: scale(1.03);
+      filter: grayscale(70%);
+      box-shadow: 0 0 35px rgba(255, 182, 193, 0.3), 0 0 50px rgba(135, 206, 250, 0.3);
+    }
+
+    /* Анимации */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>прости меня, радость моя. я запомню каждое слово,<br>которое ты скажешь мне. клянусь. je t'aime, mon âme.</h1>
+
+  <div class="image-container">
+    <img src="photo1.jpg" alt="Первая фотография">
+  </div>
+
+  <h2>мир, мой любимый малыш хоу?</h2>
+
+  <div class="image-container">
+    <img src="photo2.jpg" alt="Вторая фотография">
+  </div>
+</body>
+</html>
